@@ -1,0 +1,752 @@
+/******************************************************
+
+                TABLE OF CONTENTS
+    ------------------------------------------
+        1. Project Details
+        2. Global Variables and Styles
+        3. Header, Navigation, and Toggle Checkbox Hack
+        4. Elements of Main for index.html
+        5. Elements of Main for OurEmployees.html
+        6. Form Elements for purchaseOrder.html
+        7. Elements of Main for faq.html
+        8. Elements of Main for products.html
+        9. Elements of Main for drywall.html
+        10. Elements of Main for contactUs.html
+        11. Elements of Main for metals.html
+        12. Elements of Main for insulation.html
+        13. Elements for footer
+        14. Media queries for responsiveness
+
+
+*******************************************************/
+
+
+/************************************************
+1. Project Details
+
+Project: Murofast Website, COMM672 Final Project
+Authors: Group 5 -  Sebastian X. Munoz-Medina
+                    Ernaldo Becerra
+                    Kevin Hutchison
+*************************************************/
+
+
+/************************************************
+2. Global Variables and Styles
+*************************************************/
+:root {
+    
+    /* typography */
+    --headline-font: "Cairo", sans-serif;
+    --primary-font: "Montserrat", sans-serif;
+    --fw-b: 800;
+    --fw-m: 500;
+    --fw-l: 300;
+    
+    /* colors */
+    --primary-color: #ff9f0e;
+    --secondary-color: #e9e6dc;
+    --neutral-lt-color: #e9e6dc;
+}
+
+html {
+    font-size: 10px;
+    font-family: var(--primary-font);
+}
+
+h1, h2 {
+    font-family: var(--headline-font);
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: var(--fw-b);
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: var(--fw-m);
+    margin: 1rem 0;
+    text-align: center;
+    padding-top: 15px;
+}
+
+h3 {
+    font-size: 2.3rem;
+    font-weight: var(--fw-m);
+    text-align:center;
+    margin-bottom: 5px;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    line-height: 2;
+
+}
+
+img {
+    margin-bottom: 1rem;
+    width: 100%;
+    box-shadow: 2px 3px 6px 2px gray;
+}
+
+main {
+    width: 90%;
+    margin: auto;
+    max-width: 1200px;
+    
+}
+
+
+/************************************************
+3. Header, Navigation, and Toggle Checkbox Hack
+*************************************************/
+
+/**** header ****/
+/* class selector type */
+.menuBar {
+    display: flex;
+    align-items: center;
+    gap: .5em;
+}
+
+/*descendant selector type*/
+header h1 {
+    color: var(--secondary-color);
+    margin-right: auto;
+    text-shadow: .5rem .5rem .6rem black;
+    font-size: 4rem;
+    padding: 30px; 
+}
+
+
+/* element selector type */
+header.homePage {
+    background: url("../images/saw300.jpg") no-repeat bottom;
+    background-size: cover;
+    min-height: 150px;
+    padding: 1.5em;
+}
+
+header {
+    background: url("../images/metalShop300.jpg") no-repeat center;
+    background-size: cover;
+    min-height: 150px;
+    padding: 1.5em;
+    box-shadow: 2px 3px 6px 2px gray;
+}
+
+
+/****** navigation ******/
+nav {
+    position: absolute;
+    top: 96px;
+    left: 0;
+    width: 100%;
+    background-color: var(--primary-color);     
+}
+
+nav ul {
+    max-height: 0;
+    overflow: hidden;
+    transition: all .5s;
+}
+
+nav ul li {
+    border-bottom: solid 1px var(--neutral-lt-color);
+}
+
+nav ul a {
+    display: block;
+    padding: 1.2em 1.5em;
+    color: var(--neutral-lt-color);
+    text-decoration: none;
+    letter-spacing: .05em;
+    font-size: 1.6rem;}
+
+nav ul a:hover {
+    background-color: var(--primary-color);
+    color: #2671bc;
+    opacity: 60%;
+}
+
+
+/****** toggle nav w. checkbox hack and animation ******/
+/* grouped sibling selector type */
+.menuIcon, .menuIconClose {
+    font-size: 4rem;
+    color: var(--secondary-color);
+    margin-bottom: 10px
+}
+
+.menuIconClose {
+    display: none;
+}
+
+/* id selector type */
+#checkbox {
+    margin-left: auto;
+    display: none;
+}
+
+/* input pseudo-class selctor*/
+#checkbox:checked ~ nav ul {
+    max-height: 290px;
+    transition: all .5s;
+}
+
+#checkbox:checked ~ label .menuIcon {
+    display: none;
+}
+
+#checkbox:checked ~ label .menuIconClose {
+    display: block;
+}
+
+/************************************************
+4. Elements of Main for index.html
+*************************************************/
+.pText {
+    background-color: var(--secondary-color);
+    padding: 20px 20px 10px;
+    line-height: 2;
+    margin-bottom: 10px;
+}
+
+.sideBar {
+    background-color: var(--secondary-color);
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imgBlock {
+    display: flex;
+    flex-direction: column;
+}
+
+.photoCards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+    padding: 10px;
+}
+
+
+/************************************************
+5. Elements of Main for OurEmployees.html
+*************************************************/
+.backButton {
+	font-size: 25px;
+	color: black;
+}
+.employees p {
+	text-align: center;
+}
+.employees {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main article {
+	margin-bottom: 2rem;
+	border-bottom: solid 1px #ccc;
+	padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+}
+
+picture {
+	display: grid;
+	justify-items: center;
+}
+figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main article:last-of-type {
+	border-bottom: none;
+}
+
+figcaption {
+	color: #adadad;
+	font: italic 1.2rem var(--primary-font), sans-serif;
+}
+
+
+/************************************************
+6. Form Elements for purchaseOrder.html
+*************************************************/
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid var(--secondary-color);
+    background-color: var(--secondary-color);
+    padding: 10px 20px;
+    margin: 10px 0;
+}
+
+legend {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    background-color: #fff;
+    padding: .15rem;
+    border: 1px dashed var(--secondary-color);
+}
+
+.formControl {
+    font-family: var(--primary-font);
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: gray;
+    padding: .5rem 0;
+    margin: .5rem 0;
+    border: solid .25px #aaaaaa;
+    border-radius: 5px;
+    width: 98%;
+    display: block;
+}
+
+.submit {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    width: 275px;
+    padding: .5em;
+    margin-bottom: 4rem;
+    border: 1px solid var(--secondary-color);
+    border-radius: .5em;
+    justify-self: center;
+    align-self: center;
+}
+
+label {
+    font-size: 1.6rem;
+    padding-top: 16px;
+}
+
+/* radio buttons and check boxes*/
+.radCheck {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.radCheck li {
+    padding: 10px 0px;
+}
+
+.radCheck input {
+    height: 14px;
+    width: 14px;
+}
+
+
+/************************************************
+7. Elements of Main for faq.html
+*************************************************/
+#container {
+    width: 70%; 
+    margin:auto;
+    background-color: #E9E6DC;
+    padding: 30px;
+} 
+
+/* Question styles */
+.question {
+    padding: 10px;
+    border-radius: 6px;
+    background: white;
+    transition: all 0.5s ease;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+/* user action pseudo-class selector */
+.question:hover {
+    background-color: #ff9f0e;
+}
+
+.question.open {
+    -webkit-box-shadow: 0px 0px 17px -1px rgba(0,0,0,0.13);
+    -moz-box-shadow: 0px 0px 17px -1px rgba(0,0,0,0.13);
+    box-shadow: 0px 0px 17px -1px rgba(0,0,0,0.13);
+}
+
+.question .faqAnswer { 
+    display: none; 
+    padding: 20px 10px;
+    line-height: 28px;
+    color: rgba(0,0,0,0.6);
+    font-size: 17px;
+}
+
+.question.open:hover {
+    background: white;
+}
+
+.question h4 {
+    border-radius: 6px;
+    margin: 0px;
+    padding: 10px;
+    color: black;
+    font-weight: 400;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.question h4.open {
+    border-radius: 6px;
+    margin: 0px;
+    color: white;
+    background-color: #ff9f0e;
+    cursor: pointer;
+}
+
+.question:hover h4 {
+    color: white;
+}
+
+.faqImages {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.p { text-align: center;}
+
+
+.faq {
+     text-decoration: none;  
+}
+
+/************************************************
+8. Elements of Main for products.html
+*************************************************/
+.prodLink {
+    display: grid;
+    background-color: var(--secondary-color);
+    padding: 25px;
+    text-align: center;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    grid-column-gap: 20px;
+}
+
+/************************************************
+9. Elements of Main for drywall.html
+*************************************************/
+.drywall {
+    display: grid;
+    padding: 0px 30px;
+}
+
+.drywall h3 {
+    text-align: left;
+}
+
+.cmpBld {
+    width:100%;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+    padding: 10px;
+}
+
+/************************************************
+10. Elements of Main for contactUs.html
+*************************************************/
+.map {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--secondary-color);
+    padding: 25px
+} 
+.map p {
+    padding-top: 10px;
+    line-height: 5px;
+}
+.map iframe {
+    padding-top: 30px;
+    width: 100%;
+}
+
+.contactUs {
+    padding-top: 40px;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.contact img {
+    border: none;
+    box-shadow: none;
+    margin-bottom: 0px;
+    width: 79%;
+    padding-top: 0px;
+}
+
+.faq {
+    font-weight: bold; 
+    margin-bottom: 49px
+}
+
+.faq i {
+    font-size: 3.5rem;
+    padding-bottom: 10px
+}
+/************************************************
+11. Elements of Main for metals.html
+*************************************************/
+.metals {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    align-content: center;
+}
+.metals p {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/************************************************
+12. Elements of Main for insulation.html
+*************************************************/
+.insulation {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    align-items: center;
+}
+
+.insulation img {
+    width: 60%;
+    justify-content: center;
+}
+
+.insulation p {
+    padding: 10px;
+}
+
+/************************************************
+13. Elements for customerPortal.html
+*************************************************/
+button {
+    margin-bottom: 20px;
+    background-color: var(--primary-color);
+    color: #ffffff;    
+    font-family: var(--primary-font);
+    border: none;
+    width: 200px;
+    height: 30px;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+.button {
+    text-decoration: none;
+    color: white;
+}
+
+/************************************************
+14. Elements for footer
+*************************************************/
+footer {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+    height: 95px;
+    align-items: center;
+    padding: 0 10px;
+    margin-top: 40px;
+}
+
+footer i {
+    font-size: 2rem;
+}
+
+.storeAddress {
+    display: none;
+}
+
+/************************************************
+15. Media queries for responsiveness
+*************************************************/
+
+/* ------- medium screen media query ------- */
+/* ---------------------------------------- */
+@media screen and (min-width: 700px) {
+    header.homePage {
+        background-image: url("../images/saw600.jpg")
+    }
+    
+    header {
+        background-image: url("../images/metalShop600.jpg")
+    }
+    
+    .menuIcon {
+        display: none;
+    }
+    
+    nav ul {
+        max-height: 60px;
+        text-align: right;
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    nav ul li {
+        border-bottom: none;
+    }
+    
+    form {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-gap: 0 3rem;
+    }
+      
+    .pText { grid-area: a; }
+    .sideBar { grid-area: b; }
+    .photoCards { grid-area: c; }
+    .indexGrid {
+        display: grid;
+        grid-gap: 10px;
+        margin-top: 45px;
+        grid-template-areas:
+            "b a a" 
+            "b c c";
+        grid-template-columns: repeat(3, 2fr); 
+        grid-template-rows: auto;
+    }
+    .sideBar img {
+        margin-top: 11px;
+    }
+
+    .prodLink {
+        display: flex;
+        flex-direction: column;
+}
+    
+    .prodLink img {
+        width: 220px;
+}
+    
+    .metals {
+        display: flex;
+        flex-direction: row;
+        gap: 7rem;
+    }
+    
+    .metals img {
+        justify-content: center;
+        width: 100%;
+    }
+    .mtl1 img {
+        height: 200px;
+    }
+    
+    .insulation  {
+        display: flex;
+        flex-direction: row;
+    }
+    .insulation img {
+        margin-top: 45px;
+        width: 65%;
+    }
+    .insulImg1 {
+        margin-bottom: 148px;
+    }
+    .map {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .faq i {
+    font-size: 3.5rem;
+    padding-bottom: 10px
+}
+}
+
+/* ------- large screen media query ------- */
+/* ---------------------------------------- */
+@media screen and (min-width: 900px) {
+    header.homePage {
+        background-image: url("../images/saw900.jpg")
+    }
+    
+    header {
+        background-image: url("../images/metalShop900.jpg")
+    }
+     .products {
+        display: flex;
+        flex-direction: row;
+    }
+	.employees {
+		display: flex;
+		flex-direction: row;
+		gap: 9rem;
+	}
+	.empImg {
+		border: none;
+	}
+    .metals p {
+        padding: 10px;
+    }
+    .mtl1 p { margin: 30px;}
+    
+    footer {
+        grid-column-gap: 150px;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+    .footIcons {
+        padding-left: 30px;
+    }
+    .storeAddress {
+        display: grid;
+    }
+    
+    .storeAddress p {
+        margin-bottom: 0;
+        line-height: 1.5rem;
+    }
+    .pText img {
+        width: 720px;
+    }
+    .back {
+        margin-top: 20px;  
+    }
+    .map p {
+    padding-top: 10px;
+    line-height: 5px;
+}
+.map iframe {
+    padding-top: 0px;
+    width: 100%;
+    margin-left: 20px;
+}
+#container {
+    width: 45%; 
+}
+}
+
+
+
+

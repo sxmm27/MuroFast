@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../css/reset.css" rel="stylesheet" type="text/css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link href="../css/main.css" rel="stylesheet" type="text/css">
+        <title>Purchase Order</title>
+    </head>
+    
+    <body>
+        <header>
+            <section class="menuBar">
+                <h1>Murofast</h1>
+                <input type="checkbox" id="checkbox">
+                
+                <nav>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="customerPortal.html">Customer Portal</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="contactUs.html">Contact Us</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </nav>
+                
+                <label for="checkbox">
+                    <i class="fa-solid fa-bars menuIcon"></i>
+                    <i class="fa-solid fa-xmark menuIconClose"></i>
+                </label> 
+            </section>
+        </header>
+        
+        <main>
+            <h2>Purchase Order Inquiry</h2>
+            <a href="customerPortal.html"><i class="fa-solid fa-circle-left backButton"></i></a>
+            <form action="#" id="yourInfo" method="post" enctype="text/plain">
+                <fieldset>
+                    <legend>Your contact information</legend>
+                    <label for="yourName">Your name:</label>
+                    <input type="text" name="yourName" id="yourName" class="formControl" required>
+                    <label for="yourAddress">Your address:</label>
+                    <input type="text" name="yourAddress" id="yourAddress" class="formControl" required>
+                    <label for="yourEmail">Your email:</label>
+                    <input type="email" name="yourEmail" id="yourEmail" class="formControl" required>
+                    <label for="yourTel">Your telephone number:</label>
+                    <input type="tel" name="yourTel" id="yourTel" class="formControl" required>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Job details</legend>
+                   
+                    <section id="yourPad">
+                        <h3>Payment type</h3>
+                        <ul class="radCheck" id="payType">
+                            <li>
+                                <input type="radio" id="visa" name="payType" value="visa">
+                                <label for="visa">Visa</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="mc" name="payType" value="mc">
+                                <label for="mc">Master Card</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="amex" name="payType" value="amex">
+                                <label for="amex">American Express</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="check" name="payType" value="check">
+                                <label for="check">Check</label>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                   
+                    <label for="orderType" class="subHeading">Order Type</label>
+                            <select name="orderType" id="orderType" class="formControl">
+                                <option value="materials">Ready materials</option>
+                                <option value="sized">Sized or cut materials</option>
+                                <option value="contractor">Contractor installation</option>
+                            </select>
+
+                        <section>
+                            <h3>Product types needed</h3>
+                            <ul class="radCheck" id="productType">
+                                <li>
+                                    <input type="checkbox" id="drywall" name="productType">
+                                    <label for="drywall">Drywall</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="antiSeismic" name="productType">
+                                    <label for="antiSeismic">Anti-Seismic Systems</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="barricade" name="productType">
+                                    <label for="barricade">Barricades</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="insulation" name="productType">
+                                    <label for="insulation">Insulation</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="ceilings" name="productType">
+                                    <label for="ceilings">Ceilings</label>
+                                </li>
+                            </ul>
+                        </section>
+                
+                </fieldset>
+
+                <input type="submit" class="submit" value="Submit request for Purchse Order">
+            </form>
+            
+        </main>
+        
+	
+	<footer>
+            <section class="footIcons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-x-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            </section>
+            <p>Copyright &copy;2024 all rights reserved</p>
+            <section class="storeAddress">
+            <p>Av. Juan Ojeda Robles 125</p>
+            <p>Col. Buena Vista</p>
+            <p>Tijuana, Baja California</p>
+            <p>664-607-1400</p>
+            </section>  
+    </footer>
+        
+    </body>
+    
+</html>
+
+
+
+
+
+
+
+
+
+
+
+ 
